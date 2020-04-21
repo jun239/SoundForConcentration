@@ -1,0 +1,39 @@
+body {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+}
+
+body p {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-weight: bold;
+  color: aqua;
+  margin: 2rem 0 2rem 0;
+  font-size: 2rem;
+}
+
+#container {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.opacity {
+  opacity: 0.6;
+}
+
+.btn-disabled {
+  pointer-events: none;
+}
+
+span {
+  font-size: 1.5rem;
+}
+
+/* スマホ定義 */
+@media screen and (max-width: 600px) {
+
+}

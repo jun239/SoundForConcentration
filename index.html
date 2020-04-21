@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="ja">
+  <title>SoundForConcentration</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport"
+    content="width=device-width, maximum-scale=1.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0" />
+
+  <!-- Bootstrap 導入部分ここから -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap 導入部分ここまで -->
+</head>
+
+<body>
+  <div id="container">
+    <h3 class="title">Sound<br><span>For</span><br>Concentration</h3>
+    <!-- トップページ -->
+    <div id="page1">
+      <div class="mContainer">
+        <div class="d-flex justify-content-center">
+          <div class="p-2">
+            <div class="d-flex flex-column justify-content-center">
+              <div class="p-2">
+                <div class="d-flex flex-column justify-content-center">
+                  <div class="p-2">雨</div>
+                  <div class="p-2 range">
+                    <input type="range" class="custom-range" id="customRange1" value="0">
+                    <p id="vol1"></p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="p-2">
+                <div class="d-flex flex-column justify-content-center">
+                  <div class="p-2">川</div>
+                  <div class="p-2 range">
+                    <input type="range" class="custom-range" id="customRange2" value="0">
+                    <p id="vol2"></p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="p-2">
+                <div class="d-flex flex-column justify-content-center">
+                  <div class="p-2">鳥</div>
+                  <div class="p-2">
+                    <input type="range" class="custom-range" id="customRange3" value="0">
+                    <p id="vol3"></p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="p-2">
+                <div class="d-flex flex-column justify-content-center">
+                  <div class="p-2">セミ</div>
+                  <div class="p-2">
+                    <input type="range" class="custom-range" id="customRange4" value="0">
+                    <p id="vol4"></p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="p-2">
+            <div class="d-flex flex-column justify-content-center">
+              <div class="p-2">
+                <div class="d-flex flex-column justify-content-center">
+                  <div class="p-2">雷</div>
+                  <div class="p-2">
+                    <input type="range" class="custom-range" id="customRange5" value="0">
+                    <p id="vol5"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2">
+                <div class="d-flex flex-column justify-content-center">
+                  <div class="p-2">風</div>
+                  <div class="p-2">
+                    <input type="range" class="custom-range" id="customRange6" value="0">
+                    <p id="vol6"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2">
+                <div class="d-flex flex-column justify-content-center">
+                  <div class="p-2">傘</div>
+                  <div class="p-2">
+                    <input type="range" class="custom-range" id="customRange7" value="0">
+                    <p id="vol7"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2">
+                <div class="d-flex flex-column justify-content-center">
+                  <div class="p-2">カエル</div>
+                  <div class="p-2">
+                    <input type="range" class="custom-range" id="customRange8" value="0">
+                    <p id="vol8"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="d-flex flex-column">
+          <div class="p-2">
+            <!-- button -->
+            <div>
+              <button id="startBtn" type="button" class="btn btn-success">スタート</button>
+            </div>
+          </div>
+          <div class="p-2">
+            <!-- button -->
+            <div>
+              <button id="stopBtn" type="button" class="btn btn-success opacity btn-disabled">ストップ</button>
+            </div>
+          </div>
+
+          <audio id="sound1" preload="auto" loop>
+            <source src="./sound/rain2.mp3" type="audio/mp3">
+          </audio>
+          <audio id="sound2" preload="auto" loop>
+            <source src="./sound/creek1.mp3" type="audio/mp3">
+          </audio>
+          <audio id="sound3" preload="auto" loop>
+            <source src="./sound/bird-chorus1.mp3" type="audio/mp3">
+          </audio>
+          <audio id="sound4" preload="auto" loop>
+            <source src="./sound/aburazemi-cry1.mp3" type="audio/mp3">
+          </audio>
+          <audio id="sound5" preload="auto" loop>
+            <source src="./sound/thunder1.mp3" type="audio/mp3">
+          </audio>
+          <audio id="sound6" preload="auto" loop>
+            <source src="./sound/wind1.mp3" type="audio/mp3">
+          </audio>
+          <audio id="sound7" preload="auto" loop>
+            <source src="./sound/umbrella1.mp3" type="audio/mp3">
+          </audio>
+          <audio id="sound8" preload="auto" loop>
+            <source src="./sound/hyla-japonica-cry.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
